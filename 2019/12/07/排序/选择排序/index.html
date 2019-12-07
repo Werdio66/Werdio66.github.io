@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>在部署时出现ERROR Deployer not found: gitt 的解决方案 | Hexo</title>
+  <title>选择排序 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="运行以下指令即可  npm install hexo-deployer-git">
+  <meta name="description" content="一、基本介绍选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。 二、分析例如：对 6,3,7,2,5 排序。 第一轮排序：使用 index 记录最小值的下标,value 记录最小的值； (1) index &#x3D; 3；value &#x3D; 2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在部署时出现ERROR Deployer not found: gitt 的解决方案">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;07&#x2F;%E5%9C%A8%E9%83%A8%E7%BD%B2%E6%97%B6%E5%87%BA%E7%8E%B0ERROR-Deployer-not-found-gitt-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88&#x2F;index.html">
+<meta property="og:title" content="选择排序">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;07&#x2F;%E6%8E%92%E5%BA%8F&#x2F;%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="运行以下指令即可  npm install hexo-deployer-git">
+<meta property="og:description" content="一、基本介绍选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。 二、分析例如：对 6,3,7,2,5 排序。 第一轮排序：使用 index 记录最小值的下标,value 记录最小的值； (1) index &#x3D; 3；value &#x3D; 2">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-07T02:54:19.606Z">
+<meta property="og:updated_time" content="2019-12-07T08:27:27.248Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -144,14 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-在部署时出现ERROR-Deployer-not-found-gitt-的解决方案" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-排序/选择排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      在部署时出现ERROR Deployer not found: gitt 的解决方案
+      选择排序
     </h1>
   
 
@@ -162,18 +162,33 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/12/07/%E5%9C%A8%E9%83%A8%E7%BD%B2%E6%97%B6%E5%87%BA%E7%8E%B0ERROR-Deployer-not-found-gitt-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
-  	<time datetime="2019-12-07T02:52:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+<a href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2019-12-07T02:58:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>运行以下指令即可</strong></p>
-<blockquote>
-<p>npm install hexo-deployer-git</p>
-</blockquote>
+        <h3 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍"></a>一、基本介绍</h3><p>选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。</p>
+<h2 id="二、分析"><a href="#二、分析" class="headerlink" title="二、分析"></a>二、分析</h2><p>例如：对 6,3,7,2,5 排序。</p>
+<h5 id="第一轮排序："><a href="#第一轮排序：" class="headerlink" title="第一轮排序："></a>第一轮排序：</h5><p>使用 index 记录最小值的下标,value 记录最小的值；</p>
+<p>(1) index = 3；value = 2</p>
+<p>交换后：<strong>2</strong>,3,7,<strong>6</strong>,5</p>
+<p>第一轮排序后，最小的数字已经在第一个位置了。</p>
+<p><strong>第二轮排序：</strong></p>
+<p>因为第一个数字已经是排好序的，所有没有必要比较。</p>
+<p>(1) index = 1；value = 3</p>
+<p>交换后：2,3,7,6,5</p>
+<p><strong>第三轮排序：</strong></p>
+<p>(1) index = 4；value = 5</p>
+<p>交换后：2,3,<strong>5</strong>,6<strong>,7</strong></p>
+<p><strong>第四轮排序：</strong></p>
+<p>(1) index = 4；value = 6</p>
+<p>交换后：2,3,5,6,7</p>
+<p><strong>代码如下：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">	 <span class="comment">/*</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">        选择排序</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">     */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">selectSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> index = i;          <span class="comment">// 最小值下标</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> value = arr[i];     <span class="comment">// 最小值</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">            <span class="comment">// j = i + 1 每次去除上一轮比较过的</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">                <span class="keyword">if</span> (value &gt; arr[j])&#123;    <span class="comment">// 如果当前值不是最小值，就更新 index 和 value</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">                    index = j;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">                    value = arr[j];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">                &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            <span class="comment">// 把最小值和 i 下标的数交换</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            arr[index] = arr[i];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            arr[i] = value;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//            System.out.println("第" + (i + 1) + "轮排序");</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//            System.out.println(Arrays.toString(arr));</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr></table></figure>
+
 
       
 
@@ -253,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/07/%E5%9C%A8%E9%83%A8%E7%BD%B2%E6%97%B6%E5%87%BA%E7%8E%B0ERROR-Deployer-not-found-gitt-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/07/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,7 +282,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/07/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -277,8 +292,8 @@
     </a>
   
   
-    <a href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">冒泡排序</div>
+    <a href="/2019/12/07/%E5%9C%A8%E9%83%A8%E7%BD%B2%E6%97%B6%E5%87%BA%E7%8E%B0ERROR-Deployer-not-found-gitt-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">在部署时出现ERROR Deployer not found: gitt 的解决方案</div>
       <i class="icon-circle-right"></i>
     </a>
   
