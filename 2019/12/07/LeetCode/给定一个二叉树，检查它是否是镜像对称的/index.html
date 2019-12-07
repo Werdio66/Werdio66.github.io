@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>给定一个二叉树，检查它是否是镜像对称的 | Hexo</title>
+  <title>给定一个二叉树，检查它是否是镜像对称的 | 小仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、题目描述给定一个二叉树，检查它是否是镜像对称的。 二、分析图片是在LeetCode上截的。   这个二叉树就是一个镜像对称的。   上图的二叉树就不是镜像对称的。 从上面俩个图，我们很容易得到，满足镜像对称的条件：  必须是俩个结点(t1,t2)； t1,t2的值必须相等； t1的左结点和t2的右结点必须同时为空或者同时有值； t2的右结点和t1的左结点必须同时为空或者同时有值；  三、解法1">
+  <meta name="description" content="一、题目描述给定一个二叉树，检查它是否是镜像对称的。">
+<meta name="keywords" content="java,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="给定一个二叉树，检查它是否是镜像对称的">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;07&#x2F;LeetCode&#x2F;%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、题目描述给定一个二叉树，检查它是否是镜像对称的。 二、分析图片是在LeetCode上截的。   这个二叉树就是一个镜像对称的。   上图的二叉树就不是镜像对称的。 从上面俩个图，我们很容易得到，满足镜像对称的条件：  必须是俩个结点(t1,t2)； t1,t2的值必须相等； t1的左结点和t2的右结点必须同时为空或者同时有值； t2的右结点和t1的左结点必须同时为空或者同时有值；  三、解法1">
+<meta property="og:site_name" content="小仔">
+<meta property="og:description" content="一、题目描述给定一个二叉树，检查它是否是镜像对称的。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;shili1.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;shili2.png">
-<meta property="og:updated_time" content="2019-12-07T09:52:15.453Z">
+<meta property="og:updated_time" content="2019-12-07T11:24:41.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;shili1.png">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="小仔" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -48,11 +49,13 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/avatar.jpg" class="js-avatar">
+			<img src="/assets/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Werdio丶</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">么么哒</p>
 		
 
 		<nav class="header-menu">
@@ -60,22 +63,22 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/archives/index.html">归档</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" target="_blank" rel="noopener">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" target="_parent" href="javascript:void(0)">所有文章</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)" target="_blank" rel="noopener">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" target="_parent" href="javascript:void(0)">友链</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" target="_parent" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -102,11 +105,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/avatar.jpg" class="js-avatar">
+				<img src="/assets/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Werdio丶</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>么么哒<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -132,7 +137,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -168,12 +173,37 @@
 <a href="/2019/12/07/LeetCode/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/" class="archive-article-date">
   	<time datetime="2019-12-07T07:29:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
+	<!-- 需要添加的位置 -->
+         <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">413字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+          <!-- 添加完成 -->
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p>给定一个二叉树，检查它是否是镜像对称的。</p>
+<a id="more"></a>
+
 <h3 id="二、分析"><a href="#二、分析" class="headerlink" title="二、分析"></a>二、分析</h3><p>图片是在LeetCode上截的。</p>
 <img src="/.com//shili1.png" style="zoom:150%;">
 
@@ -286,7 +316,7 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/12/07/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">选择排序</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -306,6 +336,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、题目描述"><span class="toc-number">1.</span> <span class="toc-text">一、题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、分析"><span class="toc-number">2.</span> <span class="toc-text">二、分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、解法"><span class="toc-number">3.</span> <span class="toc-text">三、解法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-使用递归"><span class="toc-number">3.1.</span> <span class="toc-text">1.使用递归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-非递归（迭代）"><span class="toc-number">3.2.</span> <span class="toc-text">2.非递归（迭代）</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -330,7 +373,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 Werdio丶
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

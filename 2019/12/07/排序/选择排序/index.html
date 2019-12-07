@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>选择排序 | Hexo</title>
+  <title>选择排序 | 小仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、基本介绍选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。 二、分析例如：对 6,3,7,2,5 排序。 第一轮排序：使用 index 记录最小值的下标,value 记录最小的值； (1) index &#x3D; 3；value &#x3D; 2">
+  <meta name="description" content="一、基本介绍选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。">
+<meta name="keywords" content="java,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="选择排序">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;07&#x2F;%E6%8E%92%E5%BA%8F&#x2F;%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、基本介绍选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。 二、分析例如：对 6,3,7,2,5 排序。 第一轮排序：使用 index 记录最小值的下标,value 记录最小的值； (1) index &#x3D; 3；value &#x3D; 2">
+<meta property="og:site_name" content="小仔">
+<meta property="og:description" content="一、基本介绍选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-07T08:27:27.248Z">
+<meta property="og:updated_time" content="2019-12-07T11:24:03.472Z">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="小仔" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -45,11 +46,13 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/avatar.jpg" class="js-avatar">
+			<img src="/assets/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Werdio丶</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">么么哒</p>
 		
 
 		<nav class="header-menu">
@@ -57,22 +60,22 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/archives/index.html">归档</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" target="_blank" rel="noopener">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" target="_parent" href="javascript:void(0)">所有文章</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)" target="_blank" rel="noopener">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" target="_parent" href="javascript:void(0)">友链</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" target="_parent" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -99,11 +102,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/avatar.jpg" class="js-avatar">
+				<img src="/assets/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Werdio丶</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>么么哒<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -129,7 +134,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -165,12 +170,37 @@
 <a href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="archive-article-date">
   	<time datetime="2019-12-07T02:58:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
+	<!-- 需要添加的位置 -->
+         <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">383字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+          <!-- 添加完成 -->
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍"></a>一、基本介绍</h3><p>选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。</p>
+<a id="more"></a>
+
 <h2 id="二、分析"><a href="#二、分析" class="headerlink" title="二、分析"></a>二、分析</h2><p>例如：对 6,3,7,2,5 排序。</p>
 <h5 id="第一轮排序："><a href="#第一轮排序：" class="headerlink" title="第一轮排序："></a>第一轮排序：</h5><p>使用 index 记录最小值的下标,value 记录最小的值；</p>
 <p>(1) index = 3；value = 2</p>
@@ -282,11 +312,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/07/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/07/LeetCode/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          选择排序
+          给定一个二叉树，检查它是否是镜像对称的
         
       </div>
     </a>
@@ -313,6 +343,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、基本介绍"><span class="toc-number">1.</span> <span class="toc-text">一、基本介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、分析"><span class="toc-number"></span> <span class="toc-text">二、分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#第一轮排序："><span class="toc-number">0.0.1.</span> <span class="toc-text">第一轮排序：</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -336,7 +379,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 Werdio丶
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
