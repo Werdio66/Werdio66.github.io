@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://werdio66.github.io">
-  <title>插入排序 | 小仔</title>
+  <title>给定一个二叉树，检查它是否是镜像对称的 | 小仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、基本介绍插入排序：是对要排序的元素以插入的方式找寻改元素适当的位置，以达到排序的目的，把 n 个待排序的元素看做一个有序表和一个无序表，开始的时候有序表只有一个元素，无序表有 n-1 个元素，排序的过程从无序表选取第一个元素和有序表中的元素进行比较，将它加入到适当的位置。">
+  <meta name="description" content="### 一、题目描述  给定一个二叉树，检查它是否是镜像对称的。">
 <meta name="keywords" content="java,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="插入排序">
-<meta property="og:url" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;2019&#x2F;12&#x2F;08&#x2F;%E6%8E%92%E5%BA%8F&#x2F;%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F&#x2F;index.html">
+<meta property="og:title" content="给定一个二叉树，检查它是否是镜像对称的">
+<meta property="og:url" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84&#x2F;index.html">
 <meta property="og:site_name" content="小仔">
-<meta property="og:description" content="一、基本介绍插入排序：是对要排序的元素以插入的方式找寻改元素适当的位置，以达到排序的目的，把 n 个待排序的元素看做一个有序表和一个无序表，开始的时候有序表只有一个元素，无序表有 n-1 个元素，排序的过程从无序表选取第一个元素和有序表中的元素进行比较，将它加入到适当的位置。">
+<meta property="og:description" content="### 一、题目描述  给定一个二叉树，检查它是否是镜像对称的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-08T06:50:04.375Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;images&#x2F;%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84&#x2F;shili1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;images&#x2F;%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84&#x2F;shili2.png">
+<meta property="og:updated_time" content="2019-12-08T14:50:16.833Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;images&#x2F;%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84&#x2F;shili1.png">
   
     <link rel="alternative" href="/atom.xml" title="小仔" type="application/atom+xml">
   
@@ -145,14 +148,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-排序/插入排序" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-给定一个二叉树，检查它是否是镜像对称的" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      插入排序
+      给定一个二叉树，检查它是否是镜像对称的
     </h1>
   
 
@@ -163,8 +166,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/12/08/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-12-08T06:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
+<a href="/2019/12/07/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/" class="archive-article-date">
+  	<time datetime="2019-12-07T07:29:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
 	<!-- 需要添加的位置 -->
          <!-- 开始添加字数统计-->
@@ -174,7 +177,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">589字</span>
+        <span class="post-count">413字</span>
       </span>
     </span>
 
@@ -183,7 +186,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -194,30 +197,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍"></a>一、基本介绍</h3><p>插入排序：是对要排序的元素以插入的方式找寻改元素适当的位置，以达到排序的目的，把 n 个待排序的元素看做一个有序表和一个无序表，开始的时候有序表只有一个元素，无序表有 n-1 个元素，排序的过程从无序表选取第一个元素和有序表中的元素进行比较，将它加入到适当的位置。</p>
+        <meta name="referrer" content="no-referrer"/>
+### 一、题目描述
+
+<p>给定一个二叉树，检查它是否是镜像对称的。</p>
 <a id="more"></a>
 
-<h3 id="二、分析"><a href="#二、分析" class="headerlink" title="二、分析"></a>二、分析</h3><p>例如对数组 {5,3,7,6,2} 进行排序。</p>
-<p><strong>第一轮</strong></p>
-<p>刚开始有序表中的元素是 5；待插入元素是 3 </p>
-<p>第一次比较 3  &lt; 5 ，继续往 5 的前面查找，发现前面没有数，就将 3 插入到 5 的前面；</p>
-<p>排序后：3,5,7,6,2</p>
-<p><strong>第二轮</strong></p>
-<p>有序表中的元素是 3,5；待擦插入元素是 7</p>
-<p>第一次比较 7 &gt; 5 ，所有 7 就在原来的位置；</p>
-<p>排序后：3,5,7,6,2</p>
-<p><strong>第三轮</strong></p>
-<p>有序表中的元素是 3,5,7；待插入元素是 6</p>
-<p>第一次比较 6 &lt; 7；继续往 7 的前面比较，6 &gt; 5；所以就将 6 插入到 7 的前面；</p>
-<p>排序后：3,5,6,7,2</p>
-<p><strong>第四轮</strong></p>
-<p>有序表中的元素是 3,5,6,7；待插入元素是 2</p>
-<p>第一次比较 2 &lt; 7,继续向前比较；</p>
-<p>第二次比较 2 &lt; 6,继续向前比较； </p>
-<p>第三次比较 2 &lt; 5,继续向前比较；</p>
-<p>第四次比较 2 &lt; 3,继续向前比较，发现前面没有数字，就将 2 插入到 3 得到前面；</p>
-<p>排序后：2,3,5,6,7</p>
-<h3 id="三、实现"><a href="#三、实现" class="headerlink" title="三、实现"></a>三、实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 从第2个数开始插入</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">            <span class="comment">// 第二个数是要插入的数字</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> insertValue = arr[i];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">            <span class="comment">// 要插入位置数字的下标</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> insertIndex = i - <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">            <span class="comment">// 插入的下标必须大于等于0，插入的值要比前一个位置的值小</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">while</span> (insertIndex &gt;= <span class="number">0</span> &amp;&amp; insertValue &lt; arr[insertIndex]) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">                <span class="comment">// 把这个大的数后移</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">                arr[insertIndex + <span class="number">1</span>] = arr[insertIndex];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">                <span class="comment">// 往前继续找</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">                insertIndex--;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            <span class="comment">// 说明已经找到了对应的位置，在while循环中多减了1，</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            arr[insertIndex + <span class="number">1</span>] = insertValue;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//            System.out.println("第" + i + "轮");</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//            System.out.println(Arrays.toString(arr));</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr></table></figure>
+<h3 id="二、分析"><a href="#二、分析" class="headerlink" title="二、分析"></a>二、分析</h3><p>图片是在LeetCode上截的。</p>
+<img src="/images/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/shili1.png" style="zoom:150%;" />
+
+
+
+
+
+
+
+
+
+<p>这个二叉树就是一个镜像对称的。</p>
+<img src="/images/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/shili2.png" alt="shili2" style="zoom:150%;" />
+
+
+
+
+
+<p>上图的二叉树就不是镜像对称的。</p>
+<p>从上面俩个图，我们很容易得到，满足镜像对称的条件：</p>
+<ol>
+<li><strong>必须是俩个结点(t1,t2)；</strong></li>
+<li><strong>t1,t2的值必须相等；</strong></li>
+<li><strong>t1的左结点和t2的右结点必须同时为空或者同时有值；</strong></li>
+<li><strong>t2的右结点和t1的左结点必须同时为空或者同时有值；</strong></li>
+</ol>
+<h3 id="三、解法"><a href="#三、解法" class="headerlink" title="三、解法"></a>三、解法</h3><h4 id="1-使用递归"><a href="#1-使用递归" class="headerlink" title="1.使用递归"></a>1.使用递归</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSymmetric</span><span class="params">(TreeNode root)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> isTrue(root,root);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isTrue</span><span class="params">(TreeNode t1, TreeNode t2)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 递归的结束条件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (t1 == <span class="keyword">null</span> || t2 == <span class="keyword">null</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 先要满足当前俩个结点的值相等</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> t1.val == t2.val &amp;&amp; isTrue(t1.left,t2.right) &amp;&amp; isTrue(t1.right,t2.left);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr></table></figure>
+
+<h4 id="2-非递归（迭代）"><a href="#2-非递归（迭代）" class="headerlink" title="2.非递归（迭代）"></a>2.非递归（迭代）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSymmetric1</span><span class="params">(TreeNode root)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// 使用链表存储左右子结点</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    LinkedList&lt;TreeNode&gt; nodes = <span class="keyword">new</span> LinkedList&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// 将根结点加入俩次，便于第一次比较</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    nodes.add(root);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    nodes.add(root);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">while</span> (!nodes.isEmpty())&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        TreeNode t1 = nodes.removeFirst();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        TreeNode t2 = nodes.removeFirst();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">continue</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (t1 == <span class="keyword">null</span> || t2 == <span class="keyword">null</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (t1.val != t2.val)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">		<span class="comment">// 加入左结点的左结点</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        nodes.add(t1.left);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 加入右结点的右结点</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        nodes.add(t2.right);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 加入左结点的右结点</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">        nodes.add(t1.right);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 加入右结点的左结点</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        nodes.add(t2.left);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
 
       
@@ -298,7 +312,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://werdio66.github.io/2019/12/08/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://werdio66.github.io/2019/12/07/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -312,9 +326,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/12/08/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          插入排序
+        
+      </div>
+    </a>
   
-    <a href="/2019/12/07/LeetCode/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">给定一个二叉树，检查它是否是镜像对称的</div>
+  
+    <a href="/2019/12/07/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">选择排序</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -341,7 +364,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、基本介绍"><span class="toc-number">1.</span> <span class="toc-text">一、基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、分析"><span class="toc-number">2.</span> <span class="toc-text">二、分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、实现"><span class="toc-number">3.</span> <span class="toc-text">三、实现</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#二、分析"><span class="toc-number">1.</span> <span class="toc-text">二、分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、解法"><span class="toc-number">2.</span> <span class="toc-text">三、解法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-使用递归"><span class="toc-number">2.1.</span> <span class="toc-text">1.使用递归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-非递归（迭代）"><span class="toc-number">2.2.</span> <span class="toc-text">2.非递归（迭代）</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
