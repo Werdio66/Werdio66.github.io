@@ -376,7 +376,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">180字</span>
+        <span class="post-count">530字</span>
       </span>
     </span>
 
@@ -385,7 +385,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -397,8 +397,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</p>
-<h3 id="二、分析"><a href="#二、分析" class="headerlink" title="二、分析"></a>二、分析</h3><p>由前序遍历的定义可以知道，数组中的每一个值都是当前子树的根结点，根据根结点在中序遍历中的位置，我们可以将这颗树分为左右俩个子树，分别在对左右俩个子树采用同样的方法。</p>
-
+<h3 id="二、分析"><a href="#二、分析" class="headerlink" title="二、分析"></a>二、分析</h3><p>由前序遍历的定义可以知道，数组中的每一个值都是当前子树的根结点，根据根结点在中序遍历中的位置，我们可以将这颗树分为左右俩个子树，分别在对左右俩个子树采用同样的方法，这是一个递归的过程，例如：</p>
+<p>前序遍历序列 {1,2,4,7,3,5,6,8}</p>
+<p>中序遍历序列 {4,7,2,1,5,3,8,6}</p>
+<p>1.我们知道根结点是前序遍历的第一个元素 1，1 可以将树分为俩个子树，左子树的中序遍历序列为{4,7,2}，前序遍历序列为 {2,4,7}，右子树的中序遍历序列为 {5,3,8,6}，前序遍历序列为 {3,5,6,8}；</p>
+<p>2.继续分解左子树，第一个元素 2，将这棵树分为 俩个子树，左子树的中序遍历序列为 {4,7}，前序遍历序列为 {4，7}，右子树的中序遍历为 {7}，前序遍历为 {7}；</p>
+<p>3.继续分解左子树，发现前序遍历序列和中序遍历序列都为{}，说明当前结点为叶子结点，然后返回；</p>
+<p>4.继续第 2 步，分解它的右子树，发现它也是叶子结点，然后返回，即为 4 的右子结点；</p>
+<p>5.一直递归。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> TreeNode <span class="title">reConstructBinaryTree</span><span class="params">(<span class="keyword">int</span> [] pre,<span class="keyword">int</span> [] in)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (pre.length == <span class="number">0</span> || in.length == <span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(pre[<span class="number">0</span>]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; in.length; i++) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">if</span> (in[i] == pre[<span class="number">0</span>])&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">                root.left = reConstructBinaryTree(Arrays.copyOfRange(pre, <span class="number">1</span>, i + <span class="number">1</span>),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">                        Arrays.copyOfRange(in, <span class="number">0</span>, i));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">                root.right = reConstructBinaryTree(Arrays.copyOfRange(pre, i + <span class="number">1</span>, pre.length),</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">                        Arrays.copyOfRange(in, i + <span class="number">1</span>, in.length));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> root;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr></table></figure>
       
 
       
