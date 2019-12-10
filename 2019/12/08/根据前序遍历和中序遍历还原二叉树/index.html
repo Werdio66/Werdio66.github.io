@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://werdio66.github.io">
   <title>根据前序遍历和中序遍历还原二叉树 | 小仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、题目描述输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 二、分析由前序遍历的定义可以知道，数组中的每一个值都是当前子树的根结点，根据根结点在中序遍历中的位置，我们可以将这颗树分为左右俩个子树，分别在对左右俩">
+  <meta name="description" content="一、题目描述输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。">
 <meta name="keywords" content="java,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="根据前序遍历和中序遍历还原二叉树">
 <meta property="og:url" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;2019&#x2F;12&#x2F;08&#x2F;%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91&#x2F;index.html">
 <meta property="og:site_name" content="小仔">
-<meta property="og:description" content="一、题目描述输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 二、分析由前序遍历的定义可以知道，数组中的每一个值都是当前子树的根结点，根据根结点在中序遍历中的位置，我们可以将这颗树分为左右俩个子树，分别在对左右俩">
+<meta property="og:description" content="一、题目描述输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-10T13:45:24.273Z">
+<meta property="og:updated_time" content="2019-12-10T14:05:09.717Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="小仔" type="application/atom+xml">
@@ -195,6 +195,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h3><p>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</p>
+<a id="more"></a>
+
 <h3 id="二、分析"><a href="#二、分析" class="headerlink" title="二、分析"></a>二、分析</h3><p>由前序遍历的定义可以知道，数组中的每一个值都是当前子树的根结点，根据根结点在中序遍历中的位置，我们可以将这颗树分为左右俩个子树，分别在对左右俩个子树采用同样的方法，这是一个递归的过程，例如：</p>
 <p>前序遍历序列 {1,2,4,7,3,5,6,8}</p>
 <p>中序遍历序列 {4,7,2,1,5,3,8,6}</p>
