@@ -146,106 +146,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-spring-boot/spring-boot自动配置原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-redis面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/10/spring-boot/spring-boot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">spring-boot/spring-boot自动配置原理</a>
+      <a class="article-title" href="/2020/02/10/redis%E9%9D%A2%E8%AF%95%E9%A2%98/">redis面试题</a>
     </h1>
   
 
         
         
-<a href="/2020/02/10/spring-boot/spring-boot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-02-10T08:59:48.948Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
-</a>
-	<!-- 需要添加的位置 -->
-         <!-- 开始添加字数统计-->
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-          
-          <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/10/spring-boot/spring-boot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-redis/redis面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/10/redis/redis%E9%9D%A2%E8%AF%95%E9%A2%98/">redis/redis面试题</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/02/10/redis/redis%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
+<a href="/2020/02/10/redis%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
   	<time datetime="2020-02-10T08:59:48.895Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -279,37 +193,7 @@
         <h3 id="一、为什么redis是单线程的还是那么快？"><a href="#一、为什么redis是单线程的还是那么快？" class="headerlink" title="一、为什么redis是单线程的还是那么快？"></a><strong>一、为什么redis是单线程的还是那么快？</strong></h3><p>1.redis是IO多路复用，可以接受大量的socket连接，并且轮询加入队列中</p>
 <p>2.redis的操作都是基于内存的</p>
 <p>3.单线程避免的频繁的线程切换</p>
-<h3 id="二、redis和memcached的区别"><a href="#二、redis和memcached的区别" class="headerlink" title="二、redis和memcached的区别"></a><strong>二、redis和memcached的区别</strong></h3><p>1.redis的数据类型有五种，memcache只支持字符串；</p>
-<p>2.redis可以持久化，rdb，aof</p>
-<p>3.redis是单线程加 IO 多路复用，memcache是多线程加锁</p>
-<h3 id="三、redis的过期策略都有哪些？内存淘汰机制？LRU算法？"><a href="#三、redis的过期策略都有哪些？内存淘汰机制？LRU算法？" class="headerlink" title="三、redis的过期策略都有哪些？内存淘汰机制？LRU算法？"></a><strong>三、redis的过期策略都有哪些？内存淘汰机制？LRU算法？</strong></h3><h4 id="1-过期策略"><a href="#1-过期策略" class="headerlink" title="1.过期策略"></a><strong>1.过期策略</strong></h4><p>​    定期删除：每隔一段时间（可以设置），随机抽取一些设置了过期时间的 key ，检查是否过期，如果过期就删除。如果是遍历所有的 key 检查是否过期，非常消耗性能，与 redis 的设计不符。</p>
-<p>​    惰性删除：当你查询的时候会检查 key 是否已经过期，过期了就删除。但是会导致大量的过期的 key 堆积，内存耗尽，解决方案：内存淘汰机制。</p>
-<h4 id="2-内存淘汰机制"><a href="#2-内存淘汰机制" class="headerlink" title="2.内存淘汰机制"></a><strong>2.内存淘汰机制</strong></h4><p>​    如果 redis 的内存占用过多时，就会进行内存淘汰，淘汰策略有：</p>
-<ul>
-<li><p>noeviction：当内存不足时，加入新的数据会报错；</p>
-</li>
-<li><p>allkeys-lru：移除最近最少使用的 key</p>
-</li>
-<li><p>allkeys-random：随机删除某个 key</p>
-</li>
-<li><p>volatile-lru：在设置了过期时间的键中，删除最近最少使用的</p>
-</li>
-<li><p>volatile-random：在设置了过期时间的键中，随机删除 key</p>
-</li>
-<li><p>volatile-ttl：删除过期时间早的 key</p>
-</li>
-</ul>
-<h4 id="3-LRU算法"><a href="#3-LRU算法" class="headerlink" title="3.LRU算法"></a><strong>3.LRU算法</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *  简单模拟 LRU 算法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LRU</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; <span class="keyword">extends</span> <span class="title">LinkedHashMap</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> CACHE_SIZE;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">// 传入内存的容量</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LRU</span><span class="params">(<span class="keyword">int</span> cacheSize)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 指定初始化容量，加载因子，和排序规则，true 代表按照访问顺序排序，最近访问的在链表的首部</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">super</span>(<span class="number">16</span>, <span class="number">3</span> / <span class="number">4</span>, <span class="keyword">true</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        CACHE_SIZE = cacheSize;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Override</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">removeEldestEntry</span><span class="params">(Map.Entry&lt;K, V&gt; eldest)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">        </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 当缓存的数据大于容量时，为 true，删除最近最少（最老的）使用的数据</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> size() &gt; CACHE_SIZE;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<h3 id="四、如何保证-redis-的高并发和高可用？"><a href="#四、如何保证-redis-的高并发和高可用？" class="headerlink" title="四、如何保证 redis 的高并发和高可用？"></a><strong>四、如何保证 redis 的高并发和高可用？</strong></h3><p>1.高并发</p>
-<ul>
-<li>主从架构：读写分离，主负责写，并且将数据同步复制到 slave 节点，从节点只负责读。如果数据量特别大的话，就需要对 redis 做集群。</li>
-</ul>
-<p>2.高可用</p>
-<ul>
-<li>主备切换（哨兵）：如果 master 宕机了，就自动选举一个 slaver 为 master。</li>
-</ul>
-
+        
       
 
       
@@ -321,7 +205,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/10/redis/redis%E9%9D%A2%E8%AF%95%E9%A2%98/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/02/10/redis%E9%9D%A2%E8%AF%95%E9%A2%98/">展开全文 >></a>
         </p>
       
 
@@ -351,20 +235,20 @@
 
 
   
-    <article id="post-redis/redis线程模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-redis线程模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/10/redis/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">redis/redis线程模型</a>
+      <a class="article-title" href="/2020/02/10/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">redis线程模型</a>
     </h1>
   
 
         
         
-<a href="/2020/02/10/redis/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
+<a href="/2020/02/10/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
   	<time datetime="2020-02-10T08:59:48.869Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -398,14 +282,7 @@
         <h3 id="redis通信的发展历程"><a href="#redis通信的发展历程" class="headerlink" title="redis通信的发展历程"></a><strong>redis通信的发展历程</strong></h3><p><strong>1.BIO</strong></p>
 <p>​    当客户端发送数据给 redis 服务端时，服务端是阻塞的去接收客户端的信息。</p>
 <p>​    弊端：不能及时处理其他的客户端发送过来的数据。</p>
-<p><strong>2.NIO</strong></p>
-<p>​    在 redis 的服务端会循环的去遍历所有的客户端，监控哪个客户端发送数据了，当这个客户发送消息了，就调用内核的 read（fd）方法。</p>
-<p>弊端：如果有 1000 个客户端，就要经历 1000 次用户态和内核态的切换，消耗性能。</p>
-<p><strong>3.多路复用</strong></p>
-<p>​    将 NIO 中在 redis 服务端遍历转移到内核，由内核去遍历，内核将发送了数据的客户端返回给 redis 服务端，redis server 在去发送 read 请求，去处理数据。</p>
-<p>​    相较于 nio 的优势：如果有 1000 个client 连接，redis server只需要调用一次内核的 select（1000个fd），由内核去遍历所有的 client，redis server 调用 read 去处理返回的 client，消耗的性能是 一次 select 加上 select 到的 client。</p>
-<p>​    弊端：每次由用户态向内核态发送的数据量较大，内核比较繁忙。</p>
-
+        
       
 
       
@@ -417,7 +294,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/10/redis/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/02/10/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
         </p>
       
 
@@ -447,20 +324,20 @@
 
 
   
-    <article id="post-redis/redis五大数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-redis五大数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/10/redis/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">redis/redis五大数据类型</a>
+      <a class="article-title" href="/2020/02/10/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">redis五大数据类型</a>
     </h1>
   
 
         
         
-<a href="/2020/02/10/redis/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+<a href="/2020/02/10/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
   	<time datetime="2020-02-10T08:59:48.833Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -497,40 +374,7 @@
 <li>计算一年内某一个用户的登录天数？</li>
 </ul>
 <p>将数据存入数据库比较消耗资源，可以把一个  key 作为一个用户，每一个是一个 bit 位，如果当天登录就将这个 bit 设置为 1 ，每个用户一年只需要 365 / 8 + 1 个字节。</p>
-<p>​    第一个登录</p>
-<p>​    setbit    user1     0    1</p>
-<ul>
-<li>计算某一个时间区间内的活跃用户？</li>
-</ul>
-<p>统计上线的人数，去重</p>
-<p>每个 key 为一天，如果有一个用户登录，就将二进制位设置为 1 ，从第一个二进制位开始，最后将所有的 key 按位或。</p>
-<p>​    setbit 20200101   0    1，有一个用户登录了，</p>
-<p>​    setbit   20200101    1     1，又一个用户登录了，</p>
-<p>​    setbit     20200102     1     1</p>
-<p>​    bitop    or    resultkey    20200101    20200102，按位或</p>
-<p>​    bitcount    resultkey    0    -1，计算出现 1 的次数，即登录用户数 </p>
-<p><strong>3.数值</strong></p>
-<p>incr 数值加一，decr 数值减一</p>
-<p>使用场景：抢购，点赞数，因为 redis 是单进程的，所以规避了多线程情况下对数据的访问，会触发事务，影响性能，完全由 redis 的内存操作。</p>
-<h3 id="二、list"><a href="#二、list" class="headerlink" title="二、list"></a><strong>二、list</strong></h3><p><strong>1.栈</strong></p>
-<p>​    同向的操作，lpush，lpop，lrange（遍历链表的指定范围）</p>
-<p><strong>2.队列</strong></p>
-<p>​    反向操作，lpush（压栈，往右边压），rpop（从右边开始取）</p>
-<p><strong>3.数组</strong></p>
-<p>​    lindex 返回指定位置的数值</p>
-<p><strong>4.阻塞队列</strong></p>
-<p>​    bpop 阻塞住等待数据</p>
-<h3 id="三、hash"><a href="#三、hash" class="headerlink" title="三、hash"></a><strong>三、hash</strong></h3><h3 id="四、set"><a href="#四、set" class="headerlink" title="四、set"></a><strong>四、set</strong></h3><p><strong>1.去重</strong></p>
-<p><strong>2.交（sinter），并（sunion），差（sdiff）</strong></p>
-<p><strong>3.随机事件（srandemeber）</strong></p>
-<p>​    正数：随机取出一个去重的结果集</p>
-<p>​    负数：随机取出一个带重复的结果集</p>
-<p>​    0：不返还</p>
-<p>​    使用场景：</p>
-<p>​        抽奖的时候，可以指定抽奖的个数，如果是正数，表示选取几个不重复的人，如果是负数，表示一个人会中多个奖（用于人少奖品多）</p>
-<p>​    spop：随机取出一个</p>
-<h3 id="五、sorted-set"><a href="#五、sorted-set" class="headerlink" title="五、sorted_set"></a>五、sorted_set</h3><p>​    排序的实现：使用跳表（skiplist）</p>
-
+        
       
 
       
@@ -542,7 +386,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/10/redis/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/02/10/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">展开全文 >></a>
         </p>
       
 
@@ -572,20 +416,20 @@
 
 
   
-    <article id="post-排序/希尔排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-希尔排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/13/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">希尔排序</a>
+      <a class="article-title" href="/2019/12/13/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">希尔排序</a>
     </h1>
   
 
         
         
-<a href="/2019/12/13/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+<a href="/2019/12/13/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/" class="archive-article-date">
   	<time datetime="2019-12-13T05:06:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-13</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -629,7 +473,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/13/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/13/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">展开全文 >></a>
         </p>
       
 
@@ -659,20 +503,20 @@
 
 
   
-    <article id="post-树/平衡二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-平衡二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/10/%E6%A0%91/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">平衡二叉树</a>
+      <a class="article-title" href="/2019/12/10/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">平衡二叉树</a>
     </h1>
   
 
         
         
-<a href="/2019/12/10/%E6%A0%91/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
+<a href="/2019/12/10/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
   	<time datetime="2019-12-10T07:17:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -716,7 +560,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/10/%E6%A0%91/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/10/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
         </p>
       
 
@@ -746,20 +590,20 @@
 
 
   
-    <article id="post-树/二叉排序树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-二叉排序树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/10/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/">二叉排序树</a>
+      <a class="article-title" href="/2019/12/10/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/">二叉排序树</a>
     </h1>
   
 
         
         
-<a href="/2019/12/10/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/" class="archive-article-date">
+<a href="/2019/12/10/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/" class="archive-article-date">
   	<time datetime="2019-12-10T06:34:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -803,7 +647,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/10/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/10/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/">展开全文 >></a>
         </p>
       
 
@@ -833,20 +677,20 @@
 
 
   
-    <article id="post-树/根据前序遍历和中序遍历还原二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-根据前序遍历和中序遍历还原二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/08/%E6%A0%91/%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/">根据前序遍历和中序遍历还原二叉树</a>
+      <a class="article-title" href="/2019/12/08/%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/">根据前序遍历和中序遍历还原二叉树</a>
     </h1>
   
 
         
         
-<a href="/2019/12/08/%E6%A0%91/%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
+<a href="/2019/12/08/%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
   	<time datetime="2019-12-08T14:07:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -890,7 +734,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/08/%E6%A0%91/%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/08/%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
         </p>
       
 
@@ -920,20 +764,20 @@
 
 
   
-    <article id="post-排序/插入排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-插入排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/08/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">插入排序</a>
+      <a class="article-title" href="/2019/12/08/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">插入排序</a>
     </h1>
   
 
         
         
-<a href="/2019/12/08/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+<a href="/2019/12/08/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" class="archive-article-date">
   	<time datetime="2019-12-08T06:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -977,7 +821,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/08/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/08/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">展开全文 >></a>
         </p>
       
 
@@ -1007,20 +851,20 @@
 
 
   
-    <article id="post-树/给定一个二叉树，检查它是否是镜像对称的" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-给定一个二叉树，检查它是否是镜像对称的" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/07/%E6%A0%91/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/">树/给定一个二叉树，检查它是否是镜像对称的</a>
+      <a class="article-title" href="/2019/12/07/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/">给定一个二叉树，检查它是否是镜像对称的</a>
     </h1>
   
 
         
         
-<a href="/2019/12/07/%E6%A0%91/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/" class="archive-article-date">
+<a href="/2019/12/07/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/" class="archive-article-date">
   	<time datetime="2019-12-07T07:29:30.875Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
 	<!-- 需要添加的位置 -->
@@ -1068,7 +912,94 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/07/%E6%A0%91/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/07/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-选择排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/07/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">选择排序</a>
+    </h1>
+  
+
+        
+        
+<a href="/2019/12/07/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2019-12-07T02:58:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
+</a>
+	<!-- 需要添加的位置 -->
+         <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">383字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+          <!-- 添加完成 -->
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍"></a>一、基本介绍</h3><p>选择排序：第1次从 [0, n-1] 个数中选取最小的元素和第1个数交换，第2次从[1, n-1]选取最小的元素和第2个数交换，第n-1次从[n-2, n-1]个数中找出最小的数和第n-1个数交换，总共用了n-1次。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/07/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">展开全文 >></a>
         </p>
       
 
