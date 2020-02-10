@@ -16,8 +16,12 @@
 <meta property="og:site_name" content="小仔">
 <meta property="og:description" content="redis通信的发展历程1.BIO ​    当客户端发送数据给 redis 服务端时，服务端是阻塞的去接收客户端的信息。 ​    弊端：不能及时处理其他的客户端发送过来的数据。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-10T12:11:25.236Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;images&#x2F;image-20200210204249696.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;images&#x2F;image-20200210204232290.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;images&#x2F;image-20200210204232290.png">
+<meta property="og:updated_time" content="2020-02-10T12:42:56.124Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;images&#x2F;image-20200210204249696.png">
   
     <link rel="alternative" href="/atom.xml" title="小仔" type="application/atom+xml">
   
@@ -199,13 +203,19 @@
 <p>​    弊端：不能及时处理其他的客户端发送过来的数据。</p>
 <a id="more"></a>
 
+<img src="/images/image-20200210204249696.png" alt="image-20200210204249696" style="zoom:80%;" />
+
 <p><strong>2.NIO</strong></p>
 <p>​    在 redis 的服务端会循环的去遍历所有的客户端，监控哪个客户端发送数据了，当这个客户发送消息了，就调用内核的 read（fd）方法。</p>
 <p>弊端：如果有 1000 个客户端，就要经历 1000 次用户态和内核态的切换，消耗性能。</p>
+<img src="/images/image-20200210204232290.png" alt="image-20200210204232290" />
+
 <p><strong>3.多路复用</strong></p>
 <p>​    将 NIO 中在 redis 服务端遍历转移到内核，由内核去遍历，内核将发送了数据的客户端返回给 redis 服务端，redis server 在去发送 read 请求，去处理数据。</p>
 <p>​    相较于 nio 的优势：如果有 1000 个client 连接，redis server只需要调用一次内核的 select（1000个fd），由内核去遍历所有的 client，redis server 调用 read 去处理返回的 client，消耗的性能是 一次 select 加上 select 到的 client。</p>
 <p>​    弊端：每次由用户态向内核态发送的数据量较大，内核比较繁忙。</p>
+<img src="/images/image-20200210204232290.png" alt="image-20200210204232290" style="zoom:80%;" />
+
 
       
 
@@ -381,10 +391,10 @@
   </div>
 
         <!-- 不蒜子统计 -->
-		# PV方式，单个用户连续点击 n 篇，记录 n 次记录值
+		// PV方式，单个用户连续点击 n 篇，记录 n 次记录值
 		<span id="busuanzi_container_site_pv">    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 		
-		# UV方式，单个用户连续点击 n 篇，记录 1 次记录值
+		// UV方式，单个用户连续点击 n 篇，记录 1 次记录值
 		<span id="busuanzi_container_site_uv">  本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
         <script async src="/busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   

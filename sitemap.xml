@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://werdio66.github.io/2020/02/10/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</loc>
+    
+    <lastmod>2020-02-10T12:42:56.124Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://werdio66.github.io/2019/12/10/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    
+    <lastmod>2020-02-10T12:40:28.399Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://werdio66.github.io/2019/12/07/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/</loc>
+    
+    <lastmod>2020-02-10T12:31:45.020Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://werdio66.github.io/2020/02/10/redis%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     
     <lastmod>2020-02-10T12:11:28.918Z</lastmod>
@@ -9,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://werdio66.github.io/2020/02/10/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</loc>
-    
-    <lastmod>2020-02-10T12:11:25.236Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://werdio66.github.io/2020/02/10/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
     
     <lastmod>2020-02-10T12:10:56.779Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://werdio66.github.io/2019/12/07/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/</loc>
-    
-    <lastmod>2020-02-10T12:05:28.532Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://werdio66.github.io/2019/12/10/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/</loc>
     
     <lastmod>2019-12-10T14:04:57.994Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://werdio66.github.io/2019/12/10/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
-    
-    <lastmod>2019-12-10T07:32:55.016Z</lastmod>
     
   </url>
   
