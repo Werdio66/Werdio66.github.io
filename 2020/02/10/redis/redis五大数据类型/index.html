@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://werdio66.github.io">
-  <title>Archives: 2019 | 小仔</title>
+  <title>redis/redis五大数据类型 | 小仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="嘎嘎嘎">
+  <meta name="description" content="一、String1.String 2.bitmap  计算一年内某一个用户的登录天数？  将数据存入数据库比较消耗资源，可以把一个  key 作为一个用户，每一个是一个 bit 位，如果当天登录就将这个 bit 设置为 1 ，每个用户一年只需要 365 &#x2F; 8 + 1 个字节。 ​    第一个登录 ​    setbit    user1     0    1  计算某一个时间区间内的活跃用户？">
 <meta name="keywords" content="java,">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小仔">
-<meta property="og:url" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;archives&#x2F;2019&#x2F;index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis&#x2F;redis五大数据类型">
+<meta property="og:url" content="https:&#x2F;&#x2F;werdio66.github.io&#x2F;2020&#x2F;02&#x2F;10&#x2F;redis&#x2F;redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B&#x2F;index.html">
 <meta property="og:site_name" content="小仔">
-<meta property="og:description" content="嘎嘎嘎">
+<meta property="og:description" content="一、String1.String 2.bitmap  计算一年内某一个用户的登录天数？  将数据存入数据库比较消耗资源，可以把一个  key 作为一个用户，每一个是一个 bit 位，如果当天登录就将这个 bit 设置为 1 ，每个用户一年只需要 365 &#x2F; 8 + 1 个字节。 ​    第一个登录 ​    setbit    user1     0    1  计算某一个时间区间内的活跃用户？">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-02-04T08:29:40.464Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="小仔" type="application/atom+xml">
@@ -144,274 +145,251 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-redis/redis五大数据类型" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      redis/redis五大数据类型
+    </h1>
+  
+
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/02/10/redis/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2020-02-10T08:59:48.833Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
+</a>
+	<!-- 需要添加的位置 -->
+         <!-- 开始添加字数统计-->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">475字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+          
+          <!-- 添加完成 -->
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、String"><a href="#一、String" class="headerlink" title="一、String"></a><strong>一、String</strong></h3><p><strong>1.String</strong></p>
+<p><strong>2.bitmap</strong></p>
+<ul>
+<li>计算一年内某一个用户的登录天数？</li>
+</ul>
+<p>将数据存入数据库比较消耗资源，可以把一个  key 作为一个用户，每一个是一个 bit 位，如果当天登录就将这个 bit 设置为 1 ，每个用户一年只需要 365 / 8 + 1 个字节。</p>
+<p>​    第一个登录</p>
+<p>​    setbit    user1     0    1</p>
+<ul>
+<li>计算某一个时间区间内的活跃用户？</li>
+</ul>
+<p>统计上线的人数，去重</p>
+<p>每个 key 为一天，如果有一个用户登录，就将二进制位设置为 1 ，从第一个二进制位开始，最后将所有的 key 按位或。</p>
+<p>​    setbit 20200101   0    1，有一个用户登录了，</p>
+<p>​    setbit   20200101    1     1，又一个用户登录了，</p>
+<p>​    setbit     20200102     1     1</p>
+<p>​    bitop    or    resultkey    20200101    20200102，按位或</p>
+<p>​    bitcount    resultkey    0    -1，计算出现 1 的次数，即登录用户数 </p>
+<p><strong>3.数值</strong></p>
+<p>incr 数值加一，decr 数值减一</p>
+<p>使用场景：抢购，点赞数，因为 redis 是单进程的，所以规避了多线程情况下对数据的访问，会触发事务，影响性能，完全由 redis 的内存操作。</p>
+<h3 id="二、list"><a href="#二、list" class="headerlink" title="二、list"></a><strong>二、list</strong></h3><p><strong>1.栈</strong></p>
+<p>​    同向的操作，lpush，lpop，lrange（遍历链表的指定范围）</p>
+<p><strong>2.队列</strong></p>
+<p>​    反向操作，lpush（压栈，往右边压），rpop（从右边开始取）</p>
+<p><strong>3.数组</strong></p>
+<p>​    lindex 返回指定位置的数值</p>
+<p><strong>4.阻塞队列</strong></p>
+<p>​    bpop 阻塞住等待数据</p>
+<h3 id="三、hash"><a href="#三、hash" class="headerlink" title="三、hash"></a><strong>三、hash</strong></h3><h3 id="四、set"><a href="#四、set" class="headerlink" title="四、set"></a><strong>四、set</strong></h3><p><strong>1.去重</strong></p>
+<p><strong>2.交（sinter），并（sunion），差（sdiff）</strong></p>
+<p><strong>3.随机事件（srandemeber）</strong></p>
+<p>​    正数：随机取出一个去重的结果集</p>
+<p>​    负数：随机取出一个带重复的结果集</p>
+<p>​    0：不返还</p>
+<p>​    使用场景：</p>
+<p>​        抽奖的时候，可以指定抽奖的个数，如果是正数，表示选取几个不重复的人，如果是负数，表示一个人会中多个奖（用于人少奖品多）</p>
+<p>​    spop：随机取出一个</p>
+<h3 id="五、sorted-set"><a href="#五、sorted-set" class="headerlink" title="五、sorted_set"></a>五、sorted_set</h3><p>​    排序的实现：使用跳表（skiplist）</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/13/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-12-13T05:06:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/13/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/">希尔排序</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://werdio66.github.io/2020/02/10/redis/redis%E4%BA%94%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/10/%E6%A0%91/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2019-12-10T07:17:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/02/10/redis/redis%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          redis/redis线程模型
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/13/%E6%8E%92%E5%BA%8F/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">希尔排序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/%E6%A0%91/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">平衡二叉树</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、String"><span class="toc-number">1.</span> <span class="toc-text">一、String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、list"><span class="toc-number">2.</span> <span class="toc-text">二、list</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、hash"><span class="toc-number">3.</span> <span class="toc-text">三、hash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、set"><span class="toc-number">4.</span> <span class="toc-text">四、set</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、sorted-set"><span class="toc-number">5.</span> <span class="toc-text">五、sorted_set</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/10/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2019-12-10T06:34:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91/">二叉排序树</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/08/%E6%A0%91/%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2019-12-08T14:07:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/08/%E6%A0%91/%E6%A0%B9%E6%8D%AE%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/">根据前序遍历和中序遍历还原二叉树</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/08/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-12-08T06:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/08/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">插入排序</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/07/%E6%A0%91/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/" class="archive-article-date">
-  	<time datetime="2019-12-07T07:29:30.875Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E6%A0%91/%E7%BB%99%E5%AE%9A%E4%B8%80%E4%B8%AA%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E6%A3%80%E6%9F%A5%E5%AE%83%E6%98%AF%E5%90%A6%E6%98%AF%E9%95%9C%E5%83%8F%E5%AF%B9%E7%A7%B0%E7%9A%84/">树/给定一个二叉树，检查它是否是镜像对称的</a>
-    </h1>
+ <!--添加代码开始-->
+      
+        <div class="declare" hidden="hidden"></div>
+      
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-12-07T02:58:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">选择排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/07/%E5%9C%A8%E9%83%A8%E7%BD%B2%E6%97%B6%E5%87%BA%E7%8E%B0ERROR-Deployer-not-found-gitt-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
-  	<time datetime="2019-12-07T02:52:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E5%9C%A8%E9%83%A8%E7%BD%B2%E6%97%B6%E5%87%BA%E7%8E%B0ERROR-Deployer-not-found-gitt-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">在部署时出现ERROR Deployer not found: gitt 的解决方案</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2019-12-07T01:22:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/07/%E6%8E%92%E5%BA%8F/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">冒泡排序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -443,8 +421,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
